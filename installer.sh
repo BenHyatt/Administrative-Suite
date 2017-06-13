@@ -41,8 +41,9 @@ if [ "$answer" == "yes" ]
 then
         sudo reboot
         exit
+else
+        echo -e
+        echo "${green}Ok...${reset}  Remember though, you ${red}must reboot${reset} using \"sudo reboot\" for the changes to take affect."
+        echo -e
 fi
-echo -e
-echo "${green}Ok...${reset}  Remember though, you ${red}must reboot${reset} using \"sudo reboot\" for the changes to take affect."
-echo -e
 exit
