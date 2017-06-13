@@ -46,7 +46,7 @@ then
 	version
 	if [ "$new_version" == "$version" ]
 	then
-		echo "Your ${green}Administrative Kit${reset} is up to date."
+		echo "Your ${green}Administrative Suite${reset} is up to date."
 	else
 		echo "Updating."
 		sudo wget --quiet -O /lib/bencorp_scripts/kick.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/kick.sh
