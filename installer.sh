@@ -40,6 +40,7 @@ read -p "You must ${red}reboot the server ${reset}for the ${green}Suite${reset} 
 if [ "$answer" == "yes" ]
 then
         sudo reboot
+        exit
 fi
 echo -e
 echo "${green}Ok...${reset}  Remember though, you ${red}must reboot${reset} using \"sudo reboot\" for the changes to take affect."
