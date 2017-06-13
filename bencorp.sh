@@ -63,8 +63,15 @@ then
 	read -p "This is going to permamentaly delete all ${green}Bencorp Administrative Suite${reset} files.  Type \"yes\" to confirm you want to continue." answer
 	if [ "$answer" == "yes"
 	then
+		if [ "$SUDO_USER" == "" ]
+		then
+			echo "${red}You must run as sudo to uninstall.${reset}"
+			exit 1
+		fi
+		cd /home/$SUDO_USER
 		sudo rm /lib/bencorp_scripts -r
-		sed -i '/\/lib\/bencorp_scripts\//d'
+		cd /home/$SUDO_USER
+		sed -i '/\/lib\/bencorp_scripts\//d' .bashrc
 	else
 		echo "${red}Aborting.${reset}"
 	fi
