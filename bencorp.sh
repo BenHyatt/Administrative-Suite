@@ -30,7 +30,7 @@ version()
 	sudo wget -O new_version.txt --quiet https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/version.txt
 	new_version=$(cat new_version.txt)
 	sudo rm new_version.txt
-	version=$(cat version.sh)
+	version=$(cat version.txt)
 }
 if [ "$1" == "version" ]
 then
