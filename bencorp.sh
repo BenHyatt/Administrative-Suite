@@ -58,3 +58,14 @@ then
 		sudo rm update.sh
 	fi
 fi
+if [ "$1" == "uninstall" ]
+then
+	read -p "This is going to permamentaly delete all ${green}Bencorp Administrative Suite${reset} files.  Type \"yes\" to confirm you want to continue." answer
+	if [ "$answer" == "yes"
+	then
+		sudo rm /lib/bencorp_scripts -r
+		sed -i '/\/lib\/bencorp_scripts\//d'
+	else
+		echo "${red}Aborting.${reset}"
+	fi
+fi
