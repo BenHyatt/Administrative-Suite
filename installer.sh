@@ -25,7 +25,7 @@ echo "The applications that make up the ${green}Ben Corp Administrative Suite${r
 sudo wget --quiet -O /lib/bencorp_scripts/kick.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/kick.sh
 sudo wget --quiet -O /lib/bencorp_scripts/stats.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/server-statistics.sh
 sudo wget --quiet -O /lib/bencorp_scripts/bencorp.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/bencorp.sh
-sudo wget --quiet -O /lib/bencorp_scripts/version.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/version.txt
+sudo wget --quiet -O /lib/bencorp_scripts/version.txt https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/version.txt
 echo "Now in the configuration phase."
 sudo cat >> .bashrc <<EOF
 alias kick='bash /lib/bencorp_scripts/kick.sh'
