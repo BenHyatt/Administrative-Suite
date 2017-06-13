@@ -23,12 +23,12 @@ sudo mkdir /lib/bencorp_scripts
 echo -e
 echo "The applications that make up the ${green}Ben Corp Administrative Suite${reset} are now going to be installed."
 sudo wget --quiet -O /lib/bencorp_scripts/kick.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/kick.sh
-sudo wget --quiet -O /lib/bencorp_scripts/stats.sh https://github.com/BenHyatt/Administrative-Suite/blob/master/server-statistics.sh
+sudo wget --quiet -O /lib/bencorp_scripts/stats.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/server-statistics.sh
 sudo wget --quiet -O /lib/bencorp_scripts/manual.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/manual.sh
 echo "Now in the configuration phase."
 sudo cat >> .bashrc <<EOF
 alias kick='bash /lib/bencorp_scripts/kick.sh'
-alias stats='bash /lib/bencorp_scripts/server-statistics.sh'
+alias stats='bash /lib/bencorp_scripts/stats.sh'
 alias manual='bash /lib/bencorp_scripts/manual.sh'
 EOF
 cd "$directory"
