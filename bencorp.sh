@@ -1,4 +1,5 @@
 cd /lib/bencorp_scripts
+echo $PWD
 red=$(tput setaf 1)
 green=$(tput setaf 2)
 reset=$(tput sgr0)
@@ -24,17 +25,30 @@ then
         echo "Manual coming soon."
   fi
 fi
+version()
+{
+	sudo wget -O new_version.txt --quiet https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/version.txt
+	new_version=$(cat new_version.txt)
+	sudo rm new_version.txt
+	version=$(cat version.sh)
+}
 if [ "$1" == "version" ]
 then
-  sudo wget -O new_version.txt --quiet https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/version.txt
-  new_version=$(cat new_version.txt)
-  sudo rm new_version.txt
-  version=$(cat version.txt)
-  if [ "$new_version" == "$version" ]
-  then
-    echo "Your ${green}Administrative Kit${reset} is up to date."
-  else
-    echo "There are updates available."
-    echo "Run \"bencorp update\".
-  fi
+	version
+	if [ "$new_version" == "$version" ]
+	then
+		echo "Your ${green}Administrative Kit${reset} is up to date."
+	else
+		echo "There are updates available."
+	fi
+fi
+if [ "$1" == "update" ]
+then
+	version
+	if [ "$new_version" == "$version" ]
+	then
+		echo "Your software is up to date!"
+	else
+		echo "There are updates available."
+	fi
 fi
