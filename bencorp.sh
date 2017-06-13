@@ -61,7 +61,7 @@ fi
 if [ "$1" == "uninstall" ]
 then
 	read -p "This is going to permamentaly delete all ${green}Bencorp Administrative Suite${reset} files.  Type \"yes\" to confirm you want to continue." answer
-	if [ "$answer" == "yes"
+	if [ "$answer" == "yes" ]
 	then
 		if [ "$SUDO_USER" == "" ]
 		then
