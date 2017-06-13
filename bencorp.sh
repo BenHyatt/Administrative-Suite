@@ -55,5 +55,5 @@ then
 		sudo wget --quiet -O /lib/bencorp_scripts/version.txt https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/version.txt
 		sudo wget --quiet -O /lib/bencorp_scripts/update.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/update.sh
 		sudo bash update.sh
-fi
+	fi
 fi
