@@ -35,5 +35,6 @@ then
     echo "Your ${green}Administrative Kit${reset} is up to date."
   else
     echo "There are updates available."
+    echo "Run \"bencorp update\".
   fi
 fi
