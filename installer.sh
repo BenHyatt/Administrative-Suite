@@ -9,7 +9,7 @@ then
 fi
 cd /home/$SUDO_USER
 echo "Thank you for installing the ${green}Ben Corp Solutions Administrative Suite${reset}."
-eco -e
+echo -e
 check_directory()
 {
         read -p "A new directory, /lib/bencorp_scripts/ ,  is going to be created.  Is this okay? Type \"yes\" to continue. " confirm
