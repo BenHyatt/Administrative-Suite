@@ -72,7 +72,7 @@ main() {
 				#Previous number of online users
 				previous=$(who | wc -l)
 				#Finally, the kick command!
-                        	pkill -9 -t "$username"
+                        	sudo pkill -9 -t "$username"
 				#New number of online users
 				new=$(who | wc -l)
 				#Check if the previous number of users is the new number + 1
