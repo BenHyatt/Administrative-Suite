@@ -10,15 +10,6 @@ fi
 cd /home/$SUDO_USER
 echo "Thank you for installing the ${green}Ben Corp Solutions Administrative Suite${reset}."
 echo -e
-check_directory()
-{
-        read -p "A new directory, /lib/bencorp_scripts/ ,  is going to be created.  Is this okay? Type \"yes\" to continue. " confirm
-        if [ "$confirm" != "yes" ]
-        then
-                check_directory
-        fi
-}
-check_directory
 sudo mkdir /lib/bencorp_scripts
 echo -e
 echo "The applications that make up the ${green}Ben Corp Administrative Suite${reset} are now going to be installed."
