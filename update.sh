@@ -1,1 +1,1 @@
-sudo mv new_bencorp.sh bencorp.sh
+sudo mv /lib/bencorp_scripts/new_bencorp.sh /lib/bencorp_scripts/bencorp.sh
