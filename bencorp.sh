@@ -39,7 +39,7 @@ then
 		echo "Your ${green}Administrative Suite${reset} is up to date."
 		echo "Version: $version"
 	else
-		echo "There are updates available."
+		echo "${green}There are updates available.${reset}"
 		echo "Your Version: $version."
 		echo "Latest version: $new_version."
 	fi
