@@ -84,6 +84,29 @@ then
 		echo "${red}Aborting.${reset}"
 	fi
 fi
+if [ "$1" == "kickall" ]
+then
+	read -p "Are you sure you wish to continue?  This will kick all users (besides yourself) off of the machine.  This may cause data loss.  Type \"yes\" to continue." answer
+	if [ "$answer" != "yes" ]
+	then
+		exit 1
+	fi
+	counter=0
+	num=1
+	me=$(who am i | awk '{print $2}')
+	people=$(who | wc -l)
+	while [ "$counter" -lt "$people" ]
+	do
+		user=$(who | awk '{print $2}' | sed -n "$num"p)
+       		if [ "$user" != "$me" ]
+        	then
+                	pkill -9 -t "$user"
+        	else
+                	num=$((num  + 1))
+        	fi
+        	counter=$((counter + 1))
+	done
+fi
 if [ "$1" == "" ]
 then
 	echo "${green}Bencorp Help:${reset}"
