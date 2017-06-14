@@ -47,22 +47,21 @@ fi
 if [ "$1" == "update" ]
 then
 	version
-	if [ "$new_version" == "$version" ]
+	if [ "$new_version" == "$version" -a "$2" != "-O" ]
 	then
 		echo "Your ${green}Administrative Suite${reset} is up to date."
 		echo "Version: $version"
-	else
-		echo "Your Version: $version."
-		echo "Latest version: $new_version."
-		echo "${green}Updating.${reset}"
-		sudo wget --quiet -O /lib/bencorp_scripts/kick.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/kick.sh
-		sudo wget --quiet -O /lib/bencorp_scripts/stats.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/server-statistics.sh
-		sudo wget --quiet -O /lib/bencorp_scripts/new_bencorp.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/bencorp.sh
-		sudo wget --quiet -O /lib/bencorp_scripts/version.txt https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/version.txt
-		sudo wget --quiet -O /lib/bencorp_scripts/update.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/update.sh
-		sudo bash update.sh
-		sudo rm update.sh
 	fi
+	echo "Your Version: $version."
+	echo "Latest version: $new_version."
+	echo "${green}Updating.${reset}"
+	sudo wget --quiet -O /lib/bencorp_scripts/kick.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/kick.sh
+	sudo wget --quiet -O /lib/bencorp_scripts/stats.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/server-statistics.sh
+	sudo wget --quiet -O /lib/bencorp_scripts/new_bencorp.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/bencorp.sh
+	sudo wget --quiet -O /lib/bencorp_scripts/version.txt https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/version.txt
+	sudo wget --quiet -O /lib/bencorp_scripts/update.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/update.sh
+	sudo bash update.sh
+	sudo rm update.sh
 fi
 if [ "$1" == "uninstall" ]
 then
