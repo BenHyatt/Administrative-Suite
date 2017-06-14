@@ -67,7 +67,7 @@ main() {
                         self_check "$username"
 			check "$username"
 			#Check if who they want to kick is included in who is online
-			if [[ $(who -u) == *$username* ]]
+			if [[ $(who | awk '{print $2}') == *$username* ]]
 			then
 				#Previous number of online users
 				previous=$(who | wc -l)
