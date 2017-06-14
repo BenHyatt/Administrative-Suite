@@ -19,7 +19,7 @@ echo "Now in the configuration phase."
 sudo cat >> .bashrc <<EOF
 alias kick='bash /lib/bencorp_scripts/kick.sh'
 alias stats='bash /lib/bencorp_scripts/stats.sh'
-alias bencorp='bash /lib/bencorp_scripts/bencorp.sh'
+alias bencorp='sudo bash /lib/bencorp_scripts/bencorp.sh'
 EOF
 cd "$directory"
 sudo rm installer.sh
