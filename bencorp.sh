@@ -86,7 +86,7 @@ then
 fi
 if [ "$1" == "kickall" ]
 then
-	read -p "Are you sure you wish to continue?  This will kick all users (besides yourself) off of the machine.  This may cause data loss.  Type \"yes\" to continue." answer
+	read -p "Are you sure you wish to continue?  This will ${red}kick all users${reset} (besides yourself) off of the machine.  This may cause ${red}data loss${reset} (there may be unsaved files).  Type \"yes\" to continue. " answer
 	if [ "$answer" != "yes" ]
 	then
 		exit 1
