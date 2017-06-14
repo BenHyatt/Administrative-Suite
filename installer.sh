@@ -11,8 +11,6 @@ cd /home/$SUDO_USER
 echo "Thank you for installing the ${green}Ben Corp Solutions Administrative Suite${reset}."
 echo -e
 sudo mkdir /lib/bencorp_scripts
-echo -e
-echo "The applications that make up the ${green}Ben Corp Administrative Suite${reset} are now going to be installed."
 sudo wget --quiet -O /lib/bencorp_scripts/kick.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/kick.sh
 sudo wget --quiet -O /lib/bencorp_scripts/stats.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/server-statistics.sh
 sudo wget --quiet -O /lib/bencorp_scripts/bencorp.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/bencorp.sh
@@ -24,9 +22,6 @@ alias stats='bash /lib/bencorp_scripts/stats.sh'
 alias bencorp='bash /lib/bencorp_scripts/bencorp.sh'
 EOF
 cd "$directory"
-echo -e
-echo "Deleting installer file."
-echo -e
 sudo rm installer.sh
 read -p "You must ${red}reboot the server ${reset}for the ${green}Suite${reset} to work.  Do you want to reboot now (type \"yes\" to do so)? " answer
 if [ "$answer" == "yes" ]
