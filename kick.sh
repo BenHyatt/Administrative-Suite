@@ -53,7 +53,7 @@ self_check()
 clear
 break_message "Welcome to Kick by Ben Corp Solutions.  If you ever want to leave type quit."
 #Display logged in users
-who
+who --ips
 echo -e
 main() {
         while true
