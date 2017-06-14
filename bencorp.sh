@@ -47,7 +47,12 @@ fi
 if [ "$1" == "update" ]
 then
 	version
-	if [ "$new_version" == "$version" -a "$2" != "-O" ]
+	override=0
+	if [ "$2" == "-o" -o "$2" == "--override" ]
+	then
+		override=1
+	fi
+	if [ "$new_version" == "$version" -a "$override" == 0 ]
 	then
 		echo "Your ${green}Administrative Suite${reset} is up to date."
 		echo "Version: $version"
