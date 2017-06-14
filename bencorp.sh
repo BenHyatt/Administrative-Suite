@@ -51,6 +51,7 @@ then
 	then
 		echo "Your ${green}Administrative Suite${reset} is up to date."
 		echo "Version: $version"
+		exit 1
 	fi
 	echo "Your Version: $version."
 	echo "Latest version: $new_version."
