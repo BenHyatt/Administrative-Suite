@@ -78,6 +78,7 @@ then
 		sudo rm /lib/bencorp_scripts -r
 		cd /home/$SUDO_USER
 		sed -i '/\/lib\/bencorp_scripts\//d' .bashrc
+		echo "The ${green}Ben Corp Administrative Suite 2017 ${reset} has been uninstalled.
 		echo "Note, you must ${red}reboot${reset} for all changes to take effect."
 	else
 		echo "${red}Aborting.${reset}"
