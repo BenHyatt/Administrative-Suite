@@ -34,7 +34,7 @@ alias bencorp='bash /lib/bencorp_scripts/bencorp.sh'
 EOF
 cd "$directory"
 echo -e
-echo "Deleteing installer file."
+echo "Deleting installer file."
 echo -e
 sudo rm installer.sh
 read -p "You must ${red}reboot the server ${reset}for the ${green}Suite${reset} to work.  Do you want to reboot now (type \"yes\" to do so)? " answer
