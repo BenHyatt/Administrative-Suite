@@ -84,3 +84,11 @@ then
 		echo "${red}Aborting.${reset}"
 	fi
 fi
+if [ "$1" == "" ]
+then
+	echo "${green}Bencorp Help:${reset}"
+	echo -e
+	echo "bencorp manual"
+	echo "bencorp version"
+	echo "bencorp update"
+fi
