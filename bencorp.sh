@@ -36,9 +36,12 @@ then
 	version
 	if [ "$new_version" == "$version" ]
 	then
-		echo "Your ${green}Administrative Kit${reset} is up to date."
+		echo "Your ${green}Administrative Suite${reset} is up to date."
+		echo "Version: $version"
 	else
 		echo "There are updates available."
+		echo "Your Version: $version."
+		echo "Latest version: $new_version."
 	fi
 fi
 if [ "$1" == "update" ]
@@ -47,8 +50,12 @@ then
 	if [ "$new_version" == "$version" ]
 	then
 		echo "Your ${green}Administrative Suite${reset} is up to date."
+		echo "Version: $version"
 	else
-		echo "Updating."
+		echo "There are updates available."
+		echo "Your Version: $version."
+		echo "Latest version: $new_version."
+		echo "${green}Updating.${reset}"
 		sudo wget --quiet -O /lib/bencorp_scripts/kick.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/kick.sh
 		sudo wget --quiet -O /lib/bencorp_scripts/stats.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/server-statistics.sh
 		sudo wget --quiet -O /lib/bencorp_scripts/bencorp.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/bencorp.sh
