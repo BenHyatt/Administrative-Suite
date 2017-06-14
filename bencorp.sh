@@ -100,7 +100,7 @@ then
 		user=$(who | awk '{print $2}' | sed -n "$num"p)
        		if [ "$user" != "$me" ]
         	then
-                	pkill -9 -t "$user"
+                	sudo pkill -9 -t "$user"
         	else
                 	num=$((num  + 1))
         	fi
