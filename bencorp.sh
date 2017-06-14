@@ -58,7 +58,7 @@ then
 		echo "${green}Updating.${reset}"
 		sudo wget --quiet -O /lib/bencorp_scripts/kick.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/kick.sh
 		sudo wget --quiet -O /lib/bencorp_scripts/stats.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/server-statistics.sh
-		sudo wget --quiet -O /lib/bencorp_scripts/bencorp.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/bencorp.sh
+		sudo wget --quiet -O /lib/bencorp_scripts/new_bencorp.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/bencorp.sh
 		sudo wget --quiet -O /lib/bencorp_scripts/version.txt https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/version.txt
 		sudo wget --quiet -O /lib/bencorp_scripts/update.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/update.sh
 		sudo bash update.sh
