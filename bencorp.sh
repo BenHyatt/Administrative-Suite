@@ -19,7 +19,7 @@ then
         echo "The program then makes sure you're kicking a valid user.  It requires confirmation if you want to kick yourself."
         echo "If you ever want to quit while using, type \"q\" or \"quit\"."
   fi
-  if [ "$1" == "stats" ]
+  if [ "$2" == "stats" ]
   then
         echo "Manual coming soon."
   fi
