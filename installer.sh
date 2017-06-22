@@ -18,7 +18,7 @@ sudo wget --quiet -O /lib/bencorp_scripts/version.txt https://raw.githubusercont
 echo "Now in the configuration phase."
 sudo cat >> .bashrc <<EOF
 alias kick='sudo bash /lib/bencorp_scripts/kick.sh'
-alias stats='bash /lib/bencorp_scripts/stats.sh'
+alias stats='sudo bash /lib/bencorp_scripts/stats.sh'
 alias bencorp='sudo bash /lib/bencorp_scripts/bencorp.sh'
 EOF
 cd "$directory"
