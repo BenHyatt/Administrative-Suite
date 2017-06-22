@@ -1,13 +1,12 @@
-directory=$PWD
 red=$(tput setaf 1)
 green=$(tput setaf 2)
 reset=$(tput sgr0)
-if [ "$SUDO_USER" == "" ]
+if [ "$SUDO_USER" != "" ]
 then
-        echo "${red}You must run as sudo.${reset}"
+        echo "${red}You mustn't run as sudo.${reset}"
         exit 1
 fi
-cd /home/$SUDO_USER
+cd
 echo "Thank you for installing the ${green}Ben Corp Solutions Administrative Suite${reset}."
 echo -e
 sudo mkdir /lib/bencorp_scripts
