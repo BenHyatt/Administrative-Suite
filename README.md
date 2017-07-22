@@ -1,11 +1,6 @@
 # Administrative-Suite
-This is a suite of applications for the Linux terminal aimed to help a system administrator.
-There are 2 applications.
-This program should work for all Debian distributions but the only one guarenteed to work is Raspbian.
+The JamesCorp Administrative Suite is a complete, feature-packed, premium suite of applications and tools for programmers and webmasters alike. The suite is designed for Debian.
 
-`sudo wget --quiet https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/installer.sh && bash installer.sh`
-to install.
+The suite's intuitive, one-line download couldn't be simpler. Just enter `sudo wget --quiet https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/installer.sh && bash installer.sh` into your linux terminal, and the installer will launch before your eyes.
 
-To view a list of commands, `bencorp manual`.  You can then use `bencorp manual <INSERT COMMAND HERE>` to view a command/application specific manual.
-
-To uninstall type `bencorp uninstall`.  To update type `bencorp update`.
+Your administrative suite comes with a manual, which you can access by typing `bencorp manual`. 
