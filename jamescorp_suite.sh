@@ -68,11 +68,10 @@ then
 	echo "Your Version: $version."
 	echo "Latest version: $new_version."
 	echo "${green}Updating.${reset}"
-	sudo wget --quiet -O /lib/bencorp_scripts/kick.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/kick.sh
-	sudo wget --quiet -O /lib/bencorp_scripts/stats.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/server-statistics.sh
-	sudo wget --quiet -O /lib/bencorp_scripts/new_bencorp.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/bencorp.sh
-	sudo wget --quiet -O /lib/bencorp_scripts/version.txt https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/version.txt
-	sudo wget --quiet -O /lib/bencorp_scripts/update.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/update.sh
+	
+	sudo wget --quiet -O /lib/jamescorp_suite/suite_new.sh https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/jamescorp_suite.sh
+	sudo wget --quiet -O /lib/jamescorp_suite/version.txt https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/version.txt
+	sudo wget --quiet -O /lib/jamescorp_suite/update.sh https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/update.sh
 	sudo bash update.sh
 	sudo rm update.sh
 fi
