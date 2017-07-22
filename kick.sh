@@ -69,7 +69,7 @@ show()
 }
 #Clear the Screen
 clear
-break_message "Welcome to Kick by ${green}Ben Corp Solutions${reset}.  If you ever want to leave type quit."
+break_message "Welcome to Kick by ${green}Ben Corp Solutions${reset}.  If you ever want to leave type \"${red}quit${reset}\"."
 #Display logged in users
 who --ips
 who=$(who --ips)
