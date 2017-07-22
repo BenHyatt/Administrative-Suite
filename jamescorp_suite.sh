@@ -47,8 +47,8 @@ then
 		echo "Version: $version"
 	else
 		echo "${green}There are updates available.${reset}"
-		echo "Your Version: $version."
-		echo "Latest version: $new_version."
+		echo "Your Version: $version"
+		echo "Latest version: $new_version"
 	fi
 fi
 if [ "$1" == "update" ]
