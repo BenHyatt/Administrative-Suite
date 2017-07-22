@@ -1,4 +1,4 @@
-cd /lib/bencorp_scripts
+cd /lib/jamescorp_suite
 red=$(tput setaf 1)
 green=$(tput setaf 2)
 reset=$(tput sgr0)
