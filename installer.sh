@@ -10,15 +10,13 @@ cd
 echo "Thank you for installing the ${green}Ben Corp Solutions Administrative Suite${reset}."
 echo -e
 sudo mkdir /lib/bencorp_scripts
-sudo wget --quiet -O /lib/bencorp_scripts/kick.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/kick.sh
-sudo wget --quiet -O /lib/bencorp_scripts/stats.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/server-statistics.sh
-sudo wget --quiet -O /lib/bencorp_scripts/bencorp.sh https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/bencorp.sh
-sudo wget --quiet -O /lib/bencorp_scripts/version.txt https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/version.txt
-echo "Now in the configuration phase."
+echo "Downloading files..."
+sudo wget --quiet -O /lib/jamescorp_suite/jamescorp_suite.sh https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/bencorp.sh
+sudo wget --quiet -O /lib/jamescorp_suite/version.txt https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/version.txt
+read -p "What custom keyword do you want to use to activate the suite?" custom
+echo "Configurating"
 sudo cat >> .bashrc <<EOF
-alias kick='sudo bash /lib/bencorp_scripts/kick.sh'
-alias stats='sudo bash /lib/bencorp_scripts/stats.sh'
-alias bencorp='sudo bash /lib/bencorp_scripts/bencorp.sh'
+alias $custom='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
 EOF
 cd "$directory"
 sudo rm installer.sh
