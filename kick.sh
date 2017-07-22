@@ -53,8 +53,9 @@ show()
 {
 	if [ "$1" == "show" ]
 	then
-		clear
+		echo -e
 		who --ips
+		echo -e
 		main
 	fi
 }
