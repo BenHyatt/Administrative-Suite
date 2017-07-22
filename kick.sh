@@ -53,17 +53,17 @@ show()
 {
 	if [ "$1" == "show" ]
 	then
-		main
+		who --ips
 	fi
 }
-
+#Clear the Screen
+clear
 break_message "Welcome to Kick by Ben Corp Solutions.  If you ever want to leave type quit."
 #Display logged in users
 who --ips
 echo -e
 main() {
-	#Clear the Screen
-	clear
+
 	while true
 	do
 		#Prompt users for who they want to kick
