@@ -53,6 +53,7 @@ show()
 {
 	if [ "$1" == "show" ]
 	then
+		clear
 		who --ips
 		main
 	fi
