@@ -49,14 +49,22 @@ self_check()
                 fi
         fi
 }
-#Clear the screen
-clear
+show()
+{
+	if [ "$1" == "show" ]
+	then
+		main()
+	fi
+}
+
 break_message "Welcome to Kick by Ben Corp Solutions.  If you ever want to leave type quit."
 #Display logged in users
 who --ips
 echo -e
 main() {
-        while true
+	#Clear the Screen
+	clear
+	while true
 	do
 		#Prompt users for who they want to kick
                 read -p "Enter the pts id of the session you wish to terminate (e.x. pts/0). Type /"show/" to display the most up to date list of users."  username
@@ -66,6 +74,7 @@ main() {
                 else
                         self_check "$username"
 			check "$username"
+			show "$username"
 			#Check if who they want to kick is included in who is online
 			if [[ $(who | awk '{print $2}') == *$username* ]]
 			then
