@@ -112,11 +112,3 @@ then
         	counter=$((counter + 1))
 	done
 fi
-if [ "$1" == "" ]
-then
-	echo "${green}Bencorp Help:${reset}"
-	echo -e
-	echo "bencorp manual"
-	echo "bencorp version"
-	echo "bencorp update"
-fi
