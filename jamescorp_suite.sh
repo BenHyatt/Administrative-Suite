@@ -72,8 +72,8 @@ then
 	sudo wget --quiet -O /lib/jamescorp_suite/suite_new.sh https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/jamescorp_suite.sh
 	sudo wget --quiet -O /lib/jamescorp_suite/version.txt https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/version.txt
 	sudo wget --quiet -O /lib/jamescorp_suite/update.sh https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/update.sh
-	sudo bash update.sh
-	sudo rm update.sh
+	sudo bash /lib/jamescorp_suite/update.sh
+	sudo rm /lib/jamescorp_suite/update.sh
 fi
 if [ "$1" == "uninstall" ]
 then
