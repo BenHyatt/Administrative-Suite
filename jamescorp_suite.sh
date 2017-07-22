@@ -19,13 +19,6 @@ then
         echo "The program then makes sure you're kicking a valid user.  It requires confirmation if you want to kick yourself."
         echo "If you ever want to quit while using, type \"q\" or \"quit\"."
   fi
-  if [ "$2" == "settings" ]
-  then
-       read -p "What custom keyword do you want to use to activate the suite? " custom
-	sudo cat >> .bashrc <<-EOF
-	alias $custom='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
-	EOF
-  fi
   if [ "$2" == "stats" ]
   then
         echo "Manual coming soon."
@@ -38,6 +31,13 @@ version()
 	\sudo rm new_version.txt
 	version=$(cat version.txt)
 }
+ if [ "$2" == "settings" ]
+  then
+       read -p "What custom keyword do you want to use to activate the suite? " custom
+	sudo cat >> .bashrc <<-EOF
+	alias $custom='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
+	EOF
+  fi
 if [ "$1" == "version" ]
 then
 	version
