@@ -86,10 +86,10 @@ then
 			exit 1
 		fi
 		cd /home/"$SUDO_USER"
-		sudo rm /lib/bencorp_scripts -r
+		sudo rm /lib/jamescorp_suite -r
 		cd /home/"$SUDO_USER"
-		sed -i '/\/lib\/bencorp_scripts\//d' .bashrc
-		echo "The ${green}Ben Corp Administrative Suite 2017 ${reset} has been uninstalled."
+		sed -i '/\/lib\/jamescorp_suite\//d' .bashrc
+		echo "The ${green}JamesCorp Administrative Suite 2017 ${reset} has been uninstalled."
 		echo "Note, you must ${red}reboot${reset} for all changes to take effect."
 	else
 		echo "${red}Aborting.${reset}"
