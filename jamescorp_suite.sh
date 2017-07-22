@@ -6,7 +6,7 @@ if [ "$1" == "manual" ]
 then
   if [ "$2" == ""  ]
   then
-        echo "Here is a list of programs (and a short description) you can run using the ${green}Ben Corp Solutions Administrative Kit${reset}."
+        echo "Here is a list of programs (and a short description) you can run using the ${green}James Corp Administrative Kit${reset}."
         echo "Each application has its own manual as well.  You may type \"manual\" followed by the application you want to find the manual of."
         echo -e
         echo "\"kick\" - kick users off of their SSH connections."
