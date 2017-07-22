@@ -53,10 +53,15 @@ show()
 {
 	if [ "$1" == "show" ]
 	then
-		echo -e
-		who --ips
-		echo -e
-		main
+		new_who=$(who --ips)
+		if [ "$new_who" == "$who" ]
+		then
+			echo "Nothing has changed."
+		else
+			echo -e
+			main
+			echo -e
+		fi
 	fi
 }
 #Clear the Screen
@@ -64,6 +69,7 @@ clear
 break_message "Welcome to Kick by Ben Corp Solutions.  If you ever want to leave type quit."
 #Display logged in users
 who --ips
+who=$(who --ips)
 echo -e
 main() {
 
