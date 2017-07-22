@@ -67,7 +67,7 @@ main() {
 	while true
 	do
 		#Prompt users for who they want to kick
-                read -p "Enter the pts id of the session you wish to terminate (e.x. pts/0). Type /"show/" to display the most up to date list of users."  username
+                read -p "Enter the pts id of the session you wish to terminate (e.x. pts/0). Type \"show\" to display the most up to date list of users."  username
                 if [ "$username" == "" ]
                 then
                         e "Please enter something."
