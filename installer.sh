@@ -9,7 +9,7 @@ fi
 cd
 echo "Thank you for installing the ${green}Ben Corp Solutions Administrative Suite${reset}."
 echo -e
-sudo mkdir /lib/bencorp_scripts
+sudo mkdir /lib/jamescorp_suite
 echo "Downloading files..."
 sudo wget --quiet -O /lib/jamescorp_suite/jamescorp_suite.sh https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/bencorp.sh
 sudo wget --quiet -O /lib/jamescorp_suite/version.txt https://raw.githubusercontent.com/BenHyatt/Administrative-Suite/master/version.txt
