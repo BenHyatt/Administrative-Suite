@@ -53,7 +53,7 @@ show()
 {
 	if [ "$1" == "show" ]
 	then
-		main()
+		main
 	fi
 }
 
