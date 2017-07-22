@@ -35,9 +35,8 @@ version()
 {
 	sudo wget -O new_version.txt --quiet https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/version.txt
 	new_version=$(cat new_version.txt)
+	\sudo rm new_version.txt
 	version=$(cat version.txt)
-	sudo rm new_version.txt
-	
 }
 if [ "$1" == "version" ]
 then
