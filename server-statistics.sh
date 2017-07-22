@@ -22,4 +22,5 @@ echo "There $message different SSH connections."
 echo "The CPU temperature is ${red}$temp°C${reset}."
 echo "The server has been up for ${red}$uptime${reset}."
 echo -e
+echo "Server-Statistics is brought to you by ${green}James Corp${reset}."
 echo "Server-Statistics was produced by ${green}Ben Corp Solutions${reset}."
