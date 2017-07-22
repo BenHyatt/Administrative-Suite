@@ -56,7 +56,10 @@ show()
 		new_who=$(who --ips)
 		if [ "$new_who" == "$who" ]
 		then
-			echo "Nothing has changed."
+			echo -e
+			echo "${red}Nothing has changed.${reset}"
+			echo -e
+			main
 		else
 			echo -e
 			main
