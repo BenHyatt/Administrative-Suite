@@ -31,7 +31,7 @@ version()
 	\sudo rm new_version.txt
 	version=$(cat version.txt)
 }
- if [ "$2" == "settings" ]
+ if [ "$1" == "settings" ]
   then
        read -p "What custom keyword do you want to use to activate the suite? " custom
 	sudo cat >> .bashrc <<-EOF
