@@ -118,3 +118,4 @@ then
         	counter=$((counter + 1))
 	done
 fi
+EOF
