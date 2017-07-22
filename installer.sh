@@ -13,7 +13,6 @@ sudo mkdir /lib/jamescorp_suite
 echo "Downloading files..."
 sudo wget --quiet -O /lib/jamescorp_suite/jamescorp_suite.sh https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/jamescorp_suite.sh
 sudo wget --quiet -O /lib/jamescorp_suite/version.txt https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/version.txt
-sudo wget --quiet -O /lib/jamescorp_suite/update.sh https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/update.sh
 read -p "What custom keyword do you want to use to activate the suite? " custom
 echo "Configurating"
 sudo cat >> .bashrc <<EOF
