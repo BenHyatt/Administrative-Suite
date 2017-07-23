@@ -35,9 +35,9 @@ version()
   then
   	cd
 	sed -i '/\/lib\/jamescorp_suite\//d' .bashrc
-	read -p "What custom keyword do you want to use to activate the suite? " custom
+	read -p "What custom keyword do you want to use to activate the suite? " newWord
 	sudo cat >> .bashrc <<-EOF
-	alias $custom='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
+	alias $newWord='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
 	EOF
   fi
 if [ "$1" == "version" ]
