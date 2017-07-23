@@ -20,14 +20,6 @@ alias $custom='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
 EOF
 cd "$directory"
 sudo rm installer.sh
-read -p "You must ${red}reboot the server ${reset}for the ${green}Suite${reset} to work.  Do you want to reboot now (type \"yes\" to do so)? " answer
-if [ "$answer" == "yes" ]
-then
-        sudo reboot
-        exit
-else
-        echo -e
-        echo "${green}Ok...${reset}  Remember though, you ${red}must reboot${reset} using \"sudo reboot\" for the changes to take affect."
-        echo -e
-fi
+. ~/.bashrc
+echo "Thank you for installing the JamesCorp Administrative Suite."
 exit
