@@ -33,10 +33,9 @@ version()
 }
  if [ "$1" == "settings" ]
   then
-  	cd
-	sed -i '/\/lib\/jamescorp_suite\//d' .bashrc
+	sed -i '/\/lib\/jamescorp_suite\//d' ~/.bashrc
 	read -p "What custom keyword do you want to use to activate the suite? " newWord
-	sudo cat >> .bashrc <<-EOF
+	sudo cat >> ~/.bashrc <<-EOF
 	alias $newWord='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
 	EOF
   fi
