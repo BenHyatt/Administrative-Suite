@@ -20,6 +20,6 @@ alias $custom='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
 EOF
 cd "$directory"
 sudo rm installer.sh
-. ~/.bashrc
+source ~/.bashrc
 echo "Thank you for installing the JamesCorp Administrative Suite."
 exit
