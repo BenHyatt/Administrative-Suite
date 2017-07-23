@@ -14,6 +14,7 @@ echo "Downloading files..."
 sudo wget --quiet -O /lib/jamescorp_suite/jamescorp_suite.sh https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/jamescorp_suite.sh
 sudo wget --quiet -O /lib/jamescorp_suite/version.txt https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/version.txt
 read -p "What custom keyword do you want to use to activate the suite? " custom
+echo "Great! You can always use jamescorp_suite as well as your key word."
 echo "Configurating"
 sudo cat >> .bashrc <<EOF
 alias $custom='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
