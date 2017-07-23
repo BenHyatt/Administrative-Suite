@@ -38,8 +38,8 @@ version()
         sed -i '/\/lib\/jamescorp_suite\//d' .bashrc
         sudo cat >> .bashrc <<-EOF
         alias $custom='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
-        cd /lib/jamescorp_suite
-	EOF
+        EOF
+	cd /lib/jamescorp_suite
   fi
 if [ "$1" == "version" ]
 then
