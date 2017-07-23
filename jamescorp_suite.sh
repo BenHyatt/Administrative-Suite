@@ -33,13 +33,12 @@ version()
 }
  if [ "$1" == "settings" ]
   then
-       cd
-       read -p "What custom keyword do you want to use to activate the suite? " custom
-        echo $custom
+  	cd
 	sed -i '/\/lib\/jamescorp_suite\//d' .bashrc
-        sudo cat >> .bashrc <<-EOF
-        alias $custom='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
-        EOF	
+	read -p "What custom keyword do you want to use to activate the suite? " custom
+	sudo cat >> .bashrc <<-EOF
+	alias $custom='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
+	EOF
   fi
 if [ "$1" == "version" ]
 then
