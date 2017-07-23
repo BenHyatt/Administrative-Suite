@@ -38,7 +38,6 @@ version()
 	sudo cat >> ~/.bashrc <<-EOF
 	alias $newWord='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
 	echo "Great! The keyword \"$newWord\" has been set."
-	exec bash
 	EOF
   fi
 if [ "$1" == "version" ]
@@ -258,3 +257,4 @@ main() {
 }
 main
 fi
+exec bash
