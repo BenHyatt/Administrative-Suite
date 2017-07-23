@@ -39,7 +39,7 @@ version()
         sudo cat >> .bashrc <<-EOF
         alias $custom='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
         EOF
-	cd /lib/jamescorp_suite
+	
   fi
 if [ "$1" == "version" ]
 then
