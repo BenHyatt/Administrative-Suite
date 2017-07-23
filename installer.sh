@@ -17,9 +17,9 @@ read -p "What custom keyword do you want to use to activate the suite? " custom
 echo "Configurating"
 sudo cat >> .bashrc <<EOF
 alias $custom='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
+source ~/.bashrc
 EOF
 cd "$directory"
 sudo rm installer.sh
-source ~/.bashrc
 echo "Thank you for installing the JamesCorp Administrative Suite."
 exit
