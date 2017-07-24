@@ -256,4 +256,3 @@ then
 	}
 	main
 fi
-EOF
