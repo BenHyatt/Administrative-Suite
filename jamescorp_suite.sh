@@ -259,3 +259,4 @@ then
 	}
 	main
 fi
+EOF
