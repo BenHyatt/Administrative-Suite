@@ -34,8 +34,9 @@ version()
  if [ "$1" == "settings" ]
   then
 	cd
-	read -p "What custom keyword do you want to use to activate the suite? " newWord
-	echo "alias $newWord='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'" >> .bashrc
+	read -p "What custom keyword do you want to use to activate the suite? " newKeyword
+	sudo cat >> .bashrc <<EOF
+	echo "alias $newKeyword='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'" >> .bashrc
 	exec bash
 	EOF
   fi
