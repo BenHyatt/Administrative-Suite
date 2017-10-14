@@ -33,6 +33,7 @@ version()
 }
  if [ "$1" == "settings" ]
   then
+	echo $HOME
 	. /lib/jamescorp_suite/changekeyword
   fi
 if [ "$1" == "version" ]
