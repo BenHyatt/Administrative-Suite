@@ -15,13 +15,16 @@ sudo wget --quiet -O /lib/jamescorp_suite/jamescorp_suite.sh https://raw.githubu
 sudo wget --quiet -O /lib/jamescorp_suite/version.txt https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/version.txt
 sudo wget --quiet -O /lib/jamescorp_suite/changekeyword https://raw.githubusercontent.com/KoalaMuffin/Administrative-Suite/master/changekeyword
 read -p "What custom keyword do you want to use to activate the suite? " custom
-echo "Great! You can always use jamescorp_suite as well as your key word."
-echo "Configurating"
+echo "Great! You can always use \"${green}jamescorp_suite${reset}\" as well as your key word."
+echo -e
+echo "Configuring..."
 sudo cat >> .bashrc <<EOF
 alias $custom='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
+alias jamescorp_suite='sudo bash /lib/jamescorp_suite/jamescorp_suite.sh'
 EOF
 sudo rm installer.sh
 cd "$directory"
-echo "Thank you for installing the JamesCorp Administrative Suite."
+echo -e
+echo "Thank you for installing the ${green}JamesCorp Administrative Suite${reset}."
 exec bash
 exit
