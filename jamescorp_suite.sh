@@ -213,7 +213,7 @@ then
 	clear
 	break_message "Welcome to Kick by ${green}Ben Corp Solutions${reset}.  If you ever want to leave type \"${red}quit${reset}\"."
 	#Display logged in users
-	who --ips
+	sudo w -u | tail -n +3
 	who=$(sudo w -u | tail -n +3)
 	echo -e
 	main() {
